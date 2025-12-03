@@ -4,8 +4,8 @@ import requests
 import sys
 
 # --- CONFIGURAÇÃO ---
-START_MARKER = "/spotify"
-END_MARKER = "//spotify"
+START_MARKER = "<h2>🎵 Meu Spotify</h2>"
+END_MARKER = "</div>"
 
 # Pega as credenciais
 try:
