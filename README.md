@@ -5,7 +5,7 @@ Tenho background em Biologia e aplico minha capacidade analítica para resolver 
 
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=java,spring,py,mysql,git,angular,docker,vscode&theme=dark" />
+    <img src="https://skillicons.dev/icons?i=py,mysql,git,angular,docker,vscode&theme=dark" />
   </a>
 </div>
 
