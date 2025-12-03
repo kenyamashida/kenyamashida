@@ -4,7 +4,9 @@
 
 
 <div align="center"> <h3>🔥 Top 5 do Mês</h3> </div>
-
+<div align="center"> 
+"Sem dados musicais recentes."
+</div>
 <div align="center"> <h2>🚀 Tech Stack</h2> <a href="https://skillicons.dev"> <img src="https://skillicons.dev/icons?i=java,spring,py,mysql,git,angular,docker,vscode,idea&theme=dark" /> </a> </div>
 
 <div align="center"> <h2>📊 Ritmo de Código</h2> </div>
