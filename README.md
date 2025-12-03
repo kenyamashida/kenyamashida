@@ -3,11 +3,9 @@
 Sou um Desenvolvedor Backend com foco em Java e Python.
 Tenho background em Biologia e aplico minha capacidade analítica para resolver problemas complexos de código.
 
-## 🚀 Tech Stack
-
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=java,spring,py,mysql,git,angular,docker,vscode" />
+    <img src="https://skillicons.dev/icons?i=java,spring,py,mysql,git,angular,docker,vscode&theme=dark" />
   </a>
 </div>
 
