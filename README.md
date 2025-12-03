@@ -4,10 +4,7 @@
 
 
 <div align="center"> <h3>🔥 Top 5 do Mês</h3> </div>
-<div align="center"> 
 "Sem dados musicais recentes."
-<div align="center"> <h3>🔥 Top 5 do Mês</h3>
-  
 </div>
 <div align="center"> <h2>🚀 Tech Stack</h2> <a href="https://skillicons.dev"> <img src="https://skillicons.dev/icons?i=java,spring,py,mysql,git,angular,docker,vscode,idea&theme=dark" /> </a> </div>
 
@@ -17,3 +14,4 @@
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=kenyamashida&theme=dark&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak" /> </div>
 
 <div align="center"> <img src="https://komarev.com/ghpvc/?username=kenyamashida&style=flat-square&label=PROFILE+VIEWS&color=blueviolet" alt="Profile Views"/> </div>
+
