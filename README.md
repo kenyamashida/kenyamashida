@@ -16,9 +16,15 @@
 <br>
 
 <div align="center">
-  <h2>📊 Ritmo de Código</h2>
+  <h2>🎵 Meu Spotify</h2>
   </div>
 
+
+<div align="center">
+  <h2> Ritmo de Código</h2>
+  /spotify
+  //spotify
+  </div>
   
   <br><br>
 <div align="center">
