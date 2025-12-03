@@ -2,7 +2,7 @@ name: Update Spotify Song
 
 on:
   schedule:
-    - cron: "0 * * * *" # Roda a cada 1 hora
+    - cron: "0 0 * * *" #Meia-noite UTC (21:00 no horário de Brasília)
   workflow_dispatch: # Permite rodar manualmente
 
 jobs:
