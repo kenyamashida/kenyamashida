@@ -11,8 +11,8 @@ Tenho background em Biologia e aplico minha capacidade analítica para resolver 
 
 <br />
 
-## 📊 Estatísticas do GitHub
+## 🏆 Minhas Conquistas
+
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=kenyamashida&show_icons=true&theme=dracula"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kenyamashida&layout=compact&theme=dracula"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kenyamashida&theme=dark&hide_border=true" />
 </div>
