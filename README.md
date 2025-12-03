@@ -35,3 +35,12 @@
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=kenyamashida&style=flat-square&label=PROFILE+VIEWS&color=blueviolet" alt="Profile Views"/>
 </div>
+
+<div align="center">
+  <a href="https://www.linkedin.com/in/kenyamashida" target="_blank">
+    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
+  </a> 
+  <a href="mailto:kenyamashida@gmail.com">
+    <img src="https://img.shields.io/badge/-Gmail-%23D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank">
+  </a>
+</div>
