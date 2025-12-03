@@ -4,8 +4,6 @@
   </a>
 </div>
 
-
-
 <br>
 
 <div align="center">
@@ -20,6 +18,12 @@
 <div align="center">
   <h2>📊 Ritmo de Código</h2>
   </div>
+
+  
+  <br><br>
+
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kenyamashida&theme=dark&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak" />
+</div>
 
 <br>
 
