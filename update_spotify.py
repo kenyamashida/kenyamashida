@@ -6,9 +6,9 @@ import sys
 
 # Pega as credenciais das Variáveis de Ambiente (Secrets)
 try:
-    CLIENT_ID = os.environ["ba95da00c5ca44868480b9b9e6eadf1d"]
-    CLIENT_SECRET = os.environ["eb8880304dde4ba1bb290b938e692d9a"]
-    REFRESH_TOKEN = os.environ["AQB2Xff-8agZ_6LQfttiV3XY18D76g8csrZnEUI3vPjC5s2xwU92OIj2Vk-2gySkhryFS8zDXgQEDZS17j0yYABaCLSrGd6gSPghipMJVkliwWbLRLA0-1W8fQnuoaWuQ8Y"]
+    CLIENT_ID = os.environ["SPOTIFY_CLIENT_ID"]
+    CLIENT_SECRET = os.environ["SPOTIFY_CLIENT_SECRET"]
+    REFRESH_TOKEN = os.environ["SPOTIFY_REFRESH_TOKEN"]
 except KeyError:
     print("Erro: Secrets não encontradas. Verifique o GitHub Settings.")
     sys.exit(1)
