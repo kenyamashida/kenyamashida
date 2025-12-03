@@ -1,8 +1,11 @@
 import os
 import base64
 import requests
-import re
 import sys
+
+# --- CONFIGURAÇÃO ---
+START_MARKER = ""
+END_MARKER = ""
 
 # Pega as credenciais
 try:
@@ -13,7 +16,8 @@ except KeyError:
     print("Erro: Secrets não encontradas.")
     sys.exit(1)
 
-# 1. Autenticação (Refresh Token -> Access Token)
+# 1. Autenticação
+print("Autenticando...")
 auth_header = base64.b64encode(f"{CLIENT_ID}:{CLIENT_SECRET}".encode()).decode()
 response = requests.post("https://accounts.spotify.com/api/token",
                          data={"grant_type": "refresh_token", "refresh_token": REFRESH_TOKEN},
@@ -21,46 +25,56 @@ response = requests.post("https://accounts.spotify.com/api/token",
 try:
     access_token = response.json()["access_token"]
 except KeyError:
-    print("Erro ao atualizar token. Verifique se você gerou um token com escopo 'user-top-read'.")
+    print("Erro no token. Verifique o JSON retornado:")
+    print(response.json())
     sys.exit(1)
 
 headers = {"Authorization": f"Bearer {access_token}"}
 
-# 2. Busca o Top 5 Tracks (Curto Prazo = ~4 semanas)
-# time_range options: short_term (4 weeks), medium_term (6 months), long_term (years)
+# 2. Busca o Top 5
+print("Buscando Top 5...")
 response = requests.get("https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5", headers=headers)
 
 content_lines = []
-
 if response.status_code == 200:
     items = response.json().get("items", [])
     if not items:
         content_lines.append("Sem dados suficientes este mês.")
     else:
-        # Monta a lista bonitinha
         content_lines.append("<b>🎧 Top 5 do Mês:</b><br/>")
         for i, track in enumerate(items, 1):
             name = track['name']
             artist = track['artists'][0]['name']
             url = track['external_urls']['spotify']
-            # Formato: 1. Nome da Música - Artista
             content_lines.append(f"{i}. <a href='{url}'>{name} - {artist}</a>")
 else:
-    content_lines.append("Erro ao buscar Top 5.")
+    print(f"Erro na API do Spotify: {response.status_code}")
+    content_lines.append("Erro ao buscar músicas.")
 
-# Junta tudo com quebra de linha HTML
-final_content = "<br/>".join(content_lines)
+# Conteúdo final formatado
+new_content_block = "<br/>".join(content_lines)
+final_block = f"{START_MARKER}\n<div align='center'>{new_content_block}</div>\n{END_MARKER}"
 
-print(f"Conteúdo gerado:\n{final_content}")
-
-# 3. Atualiza o README.md
+# 3. Lógica Segura de Substituição (SEM REGEX)
+print("Lendo README.md...")
 with open("README.md", "r", encoding="utf-8") as f:
-    readme = f.read()
+    original_content = f.read()
 
-pattern = r".*"
-replacement = f"\n<div align='center'>{final_content}</div>\n"
+# Verifica se as tags existem
+if START_MARKER not in original_content or END_MARKER not in original_content:
+    print("ERRO: Tags ou não encontradas no README.")
+    sys.exit(1)
 
-new_readme = re.sub(pattern, replacement, readme, flags=re.DOTALL)
+# Corta o arquivo em: Antes da Tag | (Conteúdo Velho) | Depois da Tag
+part_before = original_content.split(START_MARKER)[0]
+part_after = original_content.split(END_MARKER)[1]
 
+# Monta o novo arquivo
+new_readme = part_before + final_block + part_after
+
+# Salva
+print("Salvando alterações...")
 with open("README.md", "w", encoding="utf-8") as f:
     f.write(new_readme)
+
+print("Sucesso!")
