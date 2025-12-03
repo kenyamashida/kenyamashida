@@ -4,15 +4,7 @@
   </a>
 </div>
 
-<div align="center">
-  <br>
-  <b>Bem-vindo ao meu espaço de código!</b><br>
-  Transformando café em soluções Backend com Java e Python.
-  <br><br>
-</div>
 
-<div align="center">
-  </div>
 
 <br>
 
@@ -28,20 +20,6 @@
 <div align="center">
   <h2>📊 Ritmo de Código</h2>
   </div>
-
-<br>
-
-<div align="center">
-  <h2>🏆 Conquistas</h2>
-  
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=kenyamashida&theme=dracula&no-frame=true&no-bg=true&margin-w=4" />
-  </a>
-  
-  <br><br>
-
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kenyamashida&theme=dark&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak" />
-</div>
 
 <br>
 
