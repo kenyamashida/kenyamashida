@@ -4,8 +4,8 @@ import requests
 import sys
 
 # --- CONFIGURAÇÃO ---
-START_MARKER = ""
-END_MARKER = ""
+START_MARKER = "/spotify"
+END_MARKER = "//spotify"
 
 # Pega as credenciais
 try:
