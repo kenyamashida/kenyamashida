@@ -1,0 +1,19 @@
+name: Update Spotify Song
+on:
+  schedule:
+    - cron: "0 * * * *" # Roda a cada 1 hora
+  workflow_dispatch: # Permite rodar manualmente clicando num botão
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Update Spotify
+        uses: natemoo-re/spotify-readme@v1.2.0
+        with:
+          readme-section: spotify
+          client-id: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          client-secret: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          template: "🎵 Ouvindo agora: **{song}** - {artist}" # Personalizei para PT-BR
