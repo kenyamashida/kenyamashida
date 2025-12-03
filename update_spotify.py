@@ -4,8 +4,8 @@ import requests
 import sys
 
 # --- CONFIGURAÇÃO ---
-START_MARKER = ""
-END_MARKER = ""
+START_MARKER = "<h2>🎵 Meu Spotify</h2>"
+END_MARKER = "</div>"
 
 if not START_MARKER or not END_MARKER:
     print("ERRO CRÍTICO: Variáveis de marcação vazias.")
