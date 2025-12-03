@@ -17,30 +17,38 @@
 
 <div align="center">
   <h2>🎵 Meu Spotify</h2>
-<div align='center'><b>🎧 Top 5 do Mês:</b><br/><br/>1. <a href='https://open.spotify.com/track/5iALdwbhnUHa8zGStA3h1J'>Parachute - Hayley Williams</a><br/>2. <a href='https://open.spotify.com/track/1qwClaxDb5fCrLjXaAmB35'>Wi$h Li$t - Settled Down Acoustic Version - Taylor Swift</a><br/>3. <a href='https://open.spotify.com/track/3yiWkaQvp8cYt64M1bSVb9'>Kill Me - Hayley Williams</a><br/>4. <a href='https://open.spotify.com/track/6RSG1dKPV5gEvILwJb4QtS'>loml - Taylor Swift</a><br/>5. <a href='https://open.spotify.com/track/0X1Bz7NKvIh90nIptl5tlG'>Good Ol' Days - Hayley Williams</a></div>
-  </div>
-
-
-<div align="center">
-  <h2>📊 Ritmo de Código</h2>
-
-  
-  <br><br>
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kenyamashida&theme=dark&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak" />
+<div align='center'><table>
+            <tr>
+                <td><a href="https://open.spotify.com/track/5iALdwbhnUHa8zGStA3h1J"><img src="https://i.scdn.co/image/ab67616d000048514f422ed700af8715b23326af" width="40" height="40" alt="Cover"></a></td>
+                <td><a href="https://open.spotify.com/track/5iALdwbhnUHa8zGStA3h1J"><b>Parachute</b></a><br>Hayley Williams</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://open.spotify.com/track/1qwClaxDb5fCrLjXaAmB35"><img src="https://i.scdn.co/image/ab67616d00004851f756bdc2c11a985dc0c06d94" width="40" height="40" alt="Cover"></a></td>
+                <td><a href="https://open.spotify.com/track/1qwClaxDb5fCrLjXaAmB35"><b>Wi$h Li$t - Settled Down Acoustic Version</b></a><br>Taylor Swift</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://open.spotify.com/track/3yiWkaQvp8cYt64M1bSVb9"><img src="https://i.scdn.co/image/ab67616d000048514f422ed700af8715b23326af" width="40" height="40" alt="Cover"></a></td>
+                <td><a href="https://open.spotify.com/track/3yiWkaQvp8cYt64M1bSVb9"><b>Kill Me</b></a><br>Hayley Williams</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://open.spotify.com/track/6RSG1dKPV5gEvILwJb4QtS"><img src="https://i.scdn.co/image/ab67616d000048515076e4160d018e378f488c33" width="40" height="40" alt="Cover"></a></td>
+                <td><a href="https://open.spotify.com/track/6RSG1dKPV5gEvILwJb4QtS"><b>loml</b></a><br>Taylor Swift</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://open.spotify.com/track/0X1Bz7NKvIh90nIptl5tlG"><img src="https://i.scdn.co/image/ab67616d000048514f422ed700af8715b23326af" width="40" height="40" alt="Cover"></a></td>
+                <td><a href="https://open.spotify.com/track/0X1Bz7NKvIh90nIptl5tlG"><b>Good Ol' Days</b></a><br>Hayley Williams</td>
+            </tr>
+            </table></div>
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=kenyamashida&style=flat-square&label=PROFILE+VIEWS&color=blueviolet" alt="Profile Views"/>
-</div>
-
-<div align="center">
-  <a href="https://www.linkedin.com/in/kenyamashida" target="_blank">
-    <img src="https://skillicons.dev/icons?i=linkedin&theme=dark" alt="LinkedIn" />
+  <h2>🚀 Tech Stack</h2>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=java,spring,py,mysql,git,angular,docker,vscode,idea&theme=dark" />
   </a>
-  <a href="mailto:kenyamashida@gmail.com" target="_blank">
-    <img src="https://skillicons.dev/icons?i=gmail&theme=dark" alt="Gmail" />
-  </a>
-</div>
