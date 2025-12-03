@@ -4,8 +4,12 @@ import requests
 import sys
 
 # --- CONFIGURAÇÃO ---
-START_MARKER = "<h2>🎵 Meu Spotify</h2>"
-END_MARKER = "</div>"
+START_MARKER = ""
+END_MARKER = ""
+
+if not START_MARKER or not END_MARKER:
+    print("ERRO CRÍTICO: Variáveis de marcação vazias.")
+    sys.exit(1)
 
 # Pega as credenciais
 try:
@@ -25,8 +29,7 @@ response = requests.post("https://accounts.spotify.com/api/token",
 try:
     access_token = response.json()["access_token"]
 except KeyError:
-    print("Erro no token. Verifique o JSON retornado:")
-    print(response.json())
+    print("Erro no token.")
     sys.exit(1)
 
 headers = {"Authorization": f"Bearer {access_token}"}
@@ -41,40 +44,54 @@ if response.status_code == 200:
     if not items:
         content_lines.append("Sem dados suficientes este mês.")
     else:
-        content_lines.append("<b>🎧 Top 5 do Mês:</b><br/>")
-        for i, track in enumerate(items, 1):
+        # INÍCIO DA TABELA
+        content_lines.append("<table>")
+        
+        for track in items:
             name = track['name']
             artist = track['artists'][0]['name']
             url = track['external_urls']['spotify']
-            content_lines.append(f"{i}. <a href='{url}'>{name} - {artist}</a>")
+            # Pega a imagem do álbum (índice 2 é a pequena, 64x64, ideal para listas)
+            try:
+                image_url = track['album']['images'][2]['url']
+            except IndexError:
+                # Se não tiver imagem pequena, tenta a primeira
+                image_url = track['album']['images'][0]['url']
+            
+            # Cria uma linha da tabela com Imagem + Texto
+            row = f"""
+            <tr>
+                <td><a href="{url}"><img src="{image_url}" width="40" height="40" alt="Cover"></a></td>
+                <td><a href="{url}"><b>{name}</b></a><br>{artist}</td>
+            </tr>
+            """
+            content_lines.append(row)
+            
+        # FIM DA TABELA
+        content_lines.append("</table>")
 else:
-    print(f"Erro na API do Spotify: {response.status_code}")
     content_lines.append("Erro ao buscar músicas.")
 
-# Conteúdo final formatado
-new_content_block = "<br/>".join(content_lines)
+# Junta tudo (remove quebras de linha extras para o HTML ficar compacto)
+new_content_block = "".join(content_lines)
 final_block = f"{START_MARKER}\n<div align='center'>{new_content_block}</div>\n{END_MARKER}"
 
-# 3. Lógica Segura de Substituição (SEM REGEX)
+# 3. Atualização do Arquivo
 print("Lendo README.md...")
 with open("README.md", "r", encoding="utf-8") as f:
     original_content = f.read()
 
-# Verifica se as tags existem
 if START_MARKER not in original_content or END_MARKER not in original_content:
-    print("ERRO: Tags ou não encontradas no README.")
+    print("ERRO: Tags não encontradas.")
     sys.exit(1)
 
-# Corta o arquivo em: Antes da Tag | (Conteúdo Velho) | Depois da Tag
+print("Substituindo conteúdo...")
 part_before = original_content.split(START_MARKER)[0]
 part_after = original_content.split(END_MARKER)[1]
 
-# Monta o novo arquivo
 new_readme = part_before + final_block + part_after
 
-# Salva
-print("Salvando alterações...")
 with open("README.md", "w", encoding="utf-8") as f:
     f.write(new_readme)
 
-print("Sucesso!")
+print("Sucesso! Playlist visual gerada.")
