@@ -72,7 +72,7 @@ with open("README.md", "r", encoding="utf-8") as f:
     readme_content = f.read()
 
 # Definindo os marcadores exatos
-start_marker = "<h3>🔥 Top 5 do Mês</h3>"
+start_marker = "<h3>🎧 Top 5 do Mês</h3>"
 end_marker = "</div>"
 
 # Encontrar a posição do Título
