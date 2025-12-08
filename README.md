@@ -4,7 +4,7 @@
 
 
 <div align="center">
-    "<h3>🎧 Top 5 da Semana </h3>"
+    "<h3>🎧 Top 5 da Semana </h3>
 
 <table><tr><td><img src="https://i.scdn.co/image/ab67616d000048514f422ed700af8715b23326af" width="40" height="40" style="border-radius:5px;"/></td><td><a href="https://open.spotify.com/track/21cbaIB8ks3dag4cqiG4zz"><b>Ice In My OJ</b></a><br/>Hayley Williams</td></tr><tr><td><img src="https://i.scdn.co/image/ab67616d000048514f422ed700af8715b23326af" width="40" height="40" style="border-radius:5px;"/></td><td><a href="https://open.spotify.com/track/5iALdwbhnUHa8zGStA3h1J"><b>Parachute</b></a><br/>Hayley Williams</td></tr><tr><td><img src="https://i.scdn.co/image/ab67616d000048514f422ed700af8715b23326af" width="40" height="40" style="border-radius:5px;"/></td><td><a href="https://open.spotify.com/track/5SxcXth9dGPlZ6khs3zcD9"><b>Love Me Different</b></a><br/>Hayley Williams</td></tr><tr><td><img src="https://i.scdn.co/image/ab67616d000048514f422ed700af8715b23326af" width="40" height="40" style="border-radius:5px;"/></td><td><a href="https://open.spotify.com/track/3yiWkaQvp8cYt64M1bSVb9"><b>Kill Me</b></a><br/>Hayley Williams</td></tr><tr><td><img src="https://i.scdn.co/image/ab67616d000048514f422ed700af8715b23326af" width="40" height="40" style="border-radius:5px;"/></td><td><a href="https://open.spotify.com/track/2SXqiLAwgmCpyrftaz1YgW"><b>Ego Death At A Bachelorette Party</b></a><br/>Hayley Williams</td></tr></table>
 
